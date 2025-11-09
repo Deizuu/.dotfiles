@@ -1,8 +1,17 @@
--- plugins/telescope.lua:
+local builtin = require("telescope.builtin")
 return {
 	'nvim-telescope/telescope.nvim', tag = '0.1.8',
 	dependencies = { 'nvim-lua/plenary.nvim' },
-	config = function()
-		require("settings.telescope")
-	end,
+	keys = {
+		{"<leader>ff", builtin.find_files, desc = "Telescope find files"},
+		{"<leader>fg", builtin.live_grep, desc = "Telescope live grep"},
+		{"<leader>fb", builtin.buffers, desc = "Telescope buffers"},
+		{"<leader>fh", builtin.help_tags, desc = "Telescope help tags"},
+	}
 }
+
+
+-- k.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+-- k.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+-- k.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+-- k.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })

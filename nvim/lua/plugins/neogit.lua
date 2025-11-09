@@ -5,7 +5,8 @@ return {
     "sindrets/diffview.nvim",        -- optional - Diff integration
     "nvim-telescope/telescope.nvim", -- optional
   },
-  config = function()
-	  require("settings.neogit")
-  end
+  keys = {
+	  {"<leader>g", "<cmd>Neogit<cr>", desc = "Neogit"}
+  },
+  opts = {},
 }

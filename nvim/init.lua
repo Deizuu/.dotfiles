@@ -1,20 +1,9 @@
-require('modules.lazy')
 require('modules.lsp')
+require('opts')
+require('lazy_config')
 
-local o = vim.opt
 local k = vim.keymap
 
-vim.g.mapleader = " "
-
--- Setting options
-o.smarttab = true
-o.autoindent = true
-o.number = true
-o.clipboard = "unnamedplus"
-o.tabstop = 4
-o.shiftwidth = 4
-o.mouse = ""
-vim.wo.relativenumber = true
 
 k.set('n', '<leader>w', ':write<CR>')
 k.set('n', '<leader>q', ':quit<CR>')
